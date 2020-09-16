@@ -6,7 +6,6 @@ exports.getDate =  function(){
         day: "numeric",
         month: "long"
     };
-    //por alguna razon es-AR y es-ES no funcionan revisar.
     return today.toLocaleDateString("en-US", options);;
 };
 

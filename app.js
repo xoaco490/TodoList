@@ -12,50 +12,10 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(express.static("public"));
 
-//app.use("view engine",ejs);
 
 app.get("/", function(req, res){
     
-    
     let day = date.getDate();
-    /* var currentDay = today.getDay(); */
-     
-    //res.write("<h1>Hello chieff. everything is in order here.</h1>")
-    //res.sendFile(__dirname + "/index.html")
-    //res.write("<h1>Btw its fucking monday FFS</h1>");
-    //res.send();
-    // render siempre va a revisar dentro de la carpeta llamada views a buscar el archivo mencionado
-    //res.sendFile(__dirname + "/index.html")
-    //res.write("<h1>Cool, its not monday.</h1>");
-    //res.send()
-    
-   /*  switch(currentDay){
-        case 0:
-            day = "Domingo";
-            break;
-        case 1:
-            day = "Lunes";
-            break;
-        case 2:
-            day = "Martes";
-            break;
-        case 3:
-            day = "Miercoles";
-            break;
-        case 4:
-            day = "Jueves";
-            break;
-        case 5:
-            day = "Viernes";
-            break;
-        case 6:
-            day = "Sabado";
-            break;
-             
-        default:
-            console.log("Error: el dia equivale a "+ currentDay)
-    } */
-
 
     res.render("list", {listTitle:day, newListItems: items} );
 });
